@@ -10,15 +10,19 @@
           <% if user_signed_in? %>
             <li>
                <!-- ログイン後のHomeリンクは未実装です。自分で調べて実装してみましょう -->
+               <%= link_to 'ホーム', user_path(current_user.id) %>
             </li>
             <li>
                <!-- ログイン後のUsersリンクは未実装です。自分で調べて実装してみましょう -->
+               <%= link_to 'Users', user_path(current_user.id) %>
             </li>
             <li>
               <!-- ログイン後のBooksリンクは未実装です。自分で調べて実装してみましょう -->
+              <%= link_to 'ブックス', user_path(current_user.id) %>
             </li>
             <li>
                <!-- ログイン後のLog outリンクは未実装です。自分で調べて実装してみましょう -->
+               <%= link_to 'ログアウト', user_path(current_user.id) %>
             </li>
           <% else %>
             <li>
