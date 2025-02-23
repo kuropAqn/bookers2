@@ -2,36 +2,36 @@
 UsersController
   GET #edit
     ログインユーザーの場合
-[31m      レスポンスが成功すること (FAILED - 1)[0m
-[31m      @userが正しく設定されていること (FAILED - 2)[0m
+[32m      レスポンスが成功すること[0m
+[31m      @userが正しく設定されていること (FAILED - 1)[0m
 
 Bookモデルのテスト
   バリデーションのテスト
     titleカラム
-[31m      空欄でないこと (FAILED - 3)[0m
+[31m      空欄でないこと (FAILED - 2)[0m
     bodyカラム
-[31m      空欄でないこと (FAILED - 4)[0m
-[31m      200文字以下であること: 200文字は〇 (FAILED - 5)[0m
-[31m      200文字以下であること: 201文字は× (FAILED - 6)[0m
+[31m      空欄でないこと (FAILED - 3)[0m
+[31m      200文字以下であること: 200文字は〇 (FAILED - 4)[0m
+[31m      200文字以下であること: 201文字は× (FAILED - 5)[0m
   アソシエーションのテスト
     Userモデルとの関係
-[31m      N:1となっている (FAILED - 7)[0m
+[31m      N:1となっている (FAILED - 6)[0m
 
 Userモデルのテスト
   バリデーションのテスト
     nameカラム
-[31m      空欄でないこと (FAILED - 8)[0m
-[31m      2文字以上であること: 1文字は× (FAILED - 9)[0m
-[31m      2文字以上であること: 2文字は〇 (FAILED - 10)[0m
-[31m      20文字以下であること: 20文字は〇 (FAILED - 11)[0m
-[31m      20文字以下であること: 21文字は× (FAILED - 12)[0m
-[31m      一意性があること (FAILED - 13)[0m
+[31m      空欄でないこと (FAILED - 7)[0m
+[31m      2文字以上であること: 1文字は× (FAILED - 8)[0m
+[32m      2文字以上であること: 2文字は〇[0m
+[32m      20文字以下であること: 20文字は〇[0m
+[31m      20文字以下であること: 21文字は× (FAILED - 9)[0m
+[31m      一意性があること (FAILED - 10)[0m
     introductionカラム
-[31m      50文字以下であること: 50文字は〇 (FAILED - 14)[0m
-[31m      50文字以下であること: 51文字は× (FAILED - 15)[0m
+[32m      50文字以下であること: 50文字は〇[0m
+[31m      50文字以下であること: 51文字は× (FAILED - 11)[0m
   アソシエーションのテスト
     Bookモデルとの関係
-[31m      1:Nとなっている (FAILED - 16)[0m
+[31m      1:Nとなっている (FAILED - 12)[0m
 
 [STEP1] ユーザログイン前のテスト
   トップ画面のテスト
@@ -54,7 +54,7 @@ Userモデルのテスト
     リンクの内容を確認
 [32m      Bookersを押すと、トップ画面に遷移する[0m
 [32m      Homeを押すと、トップ画面に遷移する[0m
-[31m      Aboutを押すと、アバウト画面に遷移する (FAILED - 17)[0m
+[31m      Aboutを押すと、アバウト画面に遷移する (FAILED - 13)[0m
 [32m      Sign upを押すと、新規登録画面に遷移する[0m
 [32m      Log inを押すと、ログイン画面に遷移する[0m
   ユーザ新規登録のテスト
@@ -67,8 +67,8 @@ Userモデルのテスト
 [32m      password_confirmationフォームが表示される[0m
 [32m      Sign upボタンが表示される[0m
     新規登録成功のテスト
-[31m      正しく新規登録される (FAILED - 18)[0m
-[31m      新規登録後のリダイレクト先が、新規登録できたユーザの詳細画面になっている (FAILED - 19)[0m
+[32m      正しく新規登録される[0m
+[32m      新規登録後のリダイレクト先が、新規登録できたユーザの詳細画面になっている[0m
   ユーザログイン
     表示内容の確認
 [32m      URLが正しい[0m
@@ -78,90 +78,106 @@ Userモデルのテスト
 [32m      Log inボタンが表示される[0m
 [32m      emailフォームは表示されない[0m
     ログイン成功のテスト
-[31m      ログイン後のリダイレクト先が、ログインしたユーザの詳細画面になっている (FAILED - 20)[0m
+[32m      ログイン後のリダイレクト先が、ログインしたユーザの詳細画面になっている[0m
     ログイン失敗のテスト
 [32m      ログインに失敗し、ログイン画面にリダイレクトされる[0m
   ヘッダーのテスト: ログインしている場合
     ヘッダーの表示を確認
-[31m      Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である (FAILED - 21)[0m
-[31m      Homeリンクが表示される: 左上から2番目のリンクが「Home」である (FAILED - 22)[0m
-[31m      Usersリンクが表示される: 左上から3番目のリンクが「Users」である (FAILED - 23)[0m
-[31m      Booksリンクが表示される: 左上から4番目のリンクが「Books」である (FAILED - 24)[0m
-[31m      Log outリンクが表示される: 左上から5番目のリンクが「Log out」である (FAILED - 25)[0m
+[32m      Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である[0m
+[32m      Homeリンクが表示される: 左上から2番目のリンクが「Home」である[0m
+[32m      Usersリンクが表示される: 左上から3番目のリンクが「Users」である[0m
+[32m      Booksリンクが表示される: 左上から4番目のリンクが「Books」である[0m
+[32m      Log outリンクが表示される: 左上から5番目のリンクが「Log out」である[0m
   ユーザログアウトのテスト
     ログアウト機能のテスト
-[31m      正しくログアウトできている: ログアウト後のリダイレクト先においてAbout画面へのリンクが存在する (FAILED - 26)[0m
-[31m      ログアウト後のリダイレクト先が、トップになっている (FAILED - 27)[0m
+[31m      正しくログアウトできている: ログアウト後のリダイレクト先においてAbout画面へのリンクが存在する (FAILED - 14)[0m
+[32m      ログアウト後のリダイレクト先が、トップになっている[0m
 
 [STEP2] ユーザログイン後のテスト
   ヘッダーのテスト: ログインしている場合
     リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。
-[31m      Homeを押すと、自分のユーザ詳細画面に遷移する (FAILED - 28)[0m
-[31m      Usersを押すと、ユーザ一覧画面に遷移する (FAILED - 29)[0m
-[31m      Booksを押すと、投稿一覧画面に遷移する (FAILED - 30)[0m
+[31m      Homeを押すと、自分のユーザ詳細画面に遷移する (FAILED - 15)[0m
+[31m      Usersを押すと、ユーザ一覧画面に遷移する (FAILED - 16)[0m
+[31m      Booksを押すと、投稿一覧画面に遷移する (FAILED - 17)[0m
   投稿一覧画面のテスト
     表示内容の確認
-[31m      URLが正しい (FAILED - 31)[0m
-[31m      自分と他人の画像のリンク先が正しい (FAILED - 32)[0m
-[31m      自分の投稿と他人の投稿のタイトルのリンク先がそれぞれ正しい (FAILED - 33)[0m
-[31m      自分の投稿と他人の投稿のオピニオンが表示される (FAILED - 34)[0m
+[31m      URLが正しい (FAILED - 18)[0m
+[31m      自分と他人の画像のリンク先が正しい (FAILED - 19)[0m
+[31m      自分の投稿と他人の投稿のタイトルのリンク先がそれぞれ正しい (FAILED - 20)[0m
+[31m      自分の投稿と他人の投稿のオピニオンが表示される (FAILED - 21)[0m
     サイドバーの確認
-[31m      自分の名前と紹介文が表示される (FAILED - 35)[0m
-[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 36)[0m
-[31m      「New book」と表示される (FAILED - 37)[0m
-[31m      titleフォームが表示される (FAILED - 38)[0m
-[31m      titleフォームに値が入っていない (FAILED - 39)[0m
-[31m      bodyフォームが表示される (FAILED - 40)[0m
-[31m      bodyフォームに値が入っていない (FAILED - 41)[0m
-[31m      Create Bookボタンが表示される (FAILED - 42)[0m
+[31m      自分の名前と紹介文が表示される (FAILED - 22)[0m
+[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 23)[0m
+[31m      「New book」と表示される (FAILED - 24)[0m
+[31m      titleフォームが表示される (FAILED - 25)[0m
+[31m      titleフォームに値が入っていない (FAILED - 26)[0m
+[31m      bodyフォームが表示される (FAILED - 27)[0m
+[31m      bodyフォームに値が入っていない (FAILED - 28)[0m
+[31m      Create Bookボタンが表示される (FAILED - 29)[0m
     投稿成功のテスト
-[31m      自分の新しい投稿が正しく保存される (FAILED - 43)[0m
-[31m      リダイレクト先が、保存できた投稿の詳細画面になっている (FAILED - 44)[0m
+[31m      自分の新しい投稿が正しく保存される (FAILED - 30)[0m
+[31m      リダイレクト先が、保存できた投稿の詳細画面になっている (FAILED - 31)[0m
   自分の投稿詳細画面のテスト
     表示内容の確認
-[31m      URLが正しい (FAILED - 45)[0m
-[31m      「Book detail」と表示される (FAILED - 46)[0m
-[31m      ユーザ画像・名前のリンク先が正しい (FAILED - 47)[0m
-[31m      投稿のtitleが表示される (FAILED - 48)[0m
-[31m      投稿のbodyが表示される (FAILED - 49)[0m
-[31m      投稿の編集リンクが表示される (FAILED - 50)[0m
-[31m      投稿の削除リンクが表示される (FAILED - 51)[0m
+[31m      URLが正しい (FAILED - 32)[0m
+[31m      「Book detail」と表示される (FAILED - 33)[0m
+[31m      ユーザ画像・名前のリンク先が正しい (FAILED - 34)[0m
+[31m      投稿のtitleが表示される (FAILED - 35)[0m
+[31m      投稿のbodyが表示される (FAILED - 36)[0m
+[31m      投稿の編集リンクが表示される (FAILED - 37)[0m
+[31m      投稿の削除リンクが表示される (FAILED - 38)[0m
     サイドバーの確認
-[31m      自分の名前と紹介文が表示される (FAILED - 52)[0m
-[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 53)[0m
-[31m      「New book」と表示される (FAILED - 54)[0m
-[31m      titleフォームが表示される (FAILED - 55)[0m
-[31m      titleフォームに値が入っていない (FAILED - 56)[0m
-[31m      bodyフォームが表示される (FAILED - 57)[0m
-[31m      bodyフォームに値が入っていない (FAILED - 58)[0m
-[31m      Create Bookボタンが表示される (FAILED - 59)[0m
+[31m      自分の名前と紹介文が表示される (FAILED - 39)[0m
+[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 40)[0m
+[31m      「New book」と表示される (FAILED - 41)[0m
+[31m      titleフォームが表示される (FAILED - 42)[0m
+[31m      titleフォームに値が入っていない (FAILED - 43)[0m
+[31m      bodyフォームが表示される (FAILED - 44)[0m
+[31m      bodyフォームに値が入っていない (FAILED - 45)[0m
+[31m      Create Bookボタンが表示される (FAILED - 46)[0m
     投稿成功のテスト
-[31m      自分の新しい投稿が正しく保存される (FAILED - 60)[0m
+[31m      自分の新しい投稿が正しく保存される (FAILED - 47)[0m
     編集リンクのテスト
-[31m      編集画面に遷移する (FAILED - 61)[0m
+[31m      編集画面に遷移する (FAILED - 48)[0m
     削除リンクのテスト
-[31m      application.html.erbにjavascript_pack_tagを含んでいる (FAILED - 62)[0m
-[31m      正しく削除される (FAILED - 63)[0m
-[31m      リダイレクト先が、投稿一覧画面になっている (FAILED - 64)[0m
+[31m      application.html.erbにjavascript_pack_tagを含んでいる (FAILED - 49)[0m
+[31m      正しく削除される (FAILED - 50)[0m
+[31m      リダイレクト先が、投稿一覧画面になっている (FAILED - 51)[0m
   自分の投稿編集画面のテスト
     表示の確認
-[31m      URLが正しい (FAILED - 65)[0m
-[31m      「Editing Book」と表示される (FAILED - 66)[0m
-[31m      title編集フォームが表示される (FAILED - 67)[0m
-[31m      body編集フォームが表示される (FAILED - 68)[0m
-[31m      Update Bookボタンが表示される (FAILED - 69)[0m
-[31m      Showリンクが表示される (FAILED - 70)[0m
-[31m      Backリンクが表示される (FAILED - 71)[0m
+[31m      URLが正しい (FAILED - 52)[0m
+[31m      「Editing Book」と表示される (FAILED - 53)[0m
+[31m      title編集フォームが表示される (FAILED - 54)[0m
+[31m      body編集フォームが表示される (FAILED - 55)[0m
+[31m      Update Bookボタンが表示される (FAILED - 56)[0m
+[31m      Showリンクが表示される (FAILED - 57)[0m
+[31m      Backリンクが表示される (FAILED - 58)[0m
     編集成功のテスト
-[31m      titleが正しく更新される (FAILED - 72)[0m
-[31m      bodyが正しく更新される (FAILED - 73)[0m
-[31m      リダイレクト先が、更新した投稿の詳細画面になっている (FAILED - 74)[0m
+[31m      titleが正しく更新される (FAILED - 59)[0m
+[31m      bodyが正しく更新される (FAILED - 60)[0m
+[31m      リダイレクト先が、更新した投稿の詳細画面になっている (FAILED - 61)[0m
   ユーザ一覧画面のテスト
     表示内容の確認
-[31m      URLが正しい (FAILED - 75)[0m
-[31m      自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する (FAILED - 76)[0m
-[31m      自分と他人の名前がそれぞれ表示される (FAILED - 77)[0m
-[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 78)[0m
+[31m      URLが正しい (FAILED - 62)[0m
+[31m      自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する (FAILED - 63)[0m
+[31m      自分と他人の名前がそれぞれ表示される (FAILED - 64)[0m
+[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 65)[0m
+    サイドバーの確認
+[31m      自分の名前と紹介文が表示される (FAILED - 66)[0m
+[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 67)[0m
+[31m      「New book」と表示される (FAILED - 68)[0m
+[31m      titleフォームが表示される (FAILED - 69)[0m
+[31m      titleフォームに値が入っていない (FAILED - 70)[0m
+[31m      bodyフォームが表示される (FAILED - 71)[0m
+[31m      bodyフォームに値が入っていない (FAILED - 72)[0m
+[31m      Create Bookボタンが表示される (FAILED - 73)[0m
+  自分のユーザ詳細画面のテスト
+    表示の確認
+[31m      URLが正しい (FAILED - 74)[0m
+[31m      投稿一覧のユーザ画像のリンク先が正しい (FAILED - 75)[0m
+[31m      投稿一覧に自分の投稿のtitleが表示され、リンクが正しい (FAILED - 76)[0m
+[31m      投稿一覧に自分の投稿のbodyが表示される (FAILED - 77)[0m
+[31m      他人の投稿は表示されない (FAILED - 78)[0m
     サイドバーの確認
 [31m      自分の名前と紹介文が表示される (FAILED - 79)[0m
 [31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 80)[0m
@@ -171,179 +187,209 @@ Userモデルのテスト
 [31m      bodyフォームが表示される (FAILED - 84)[0m
 [31m      bodyフォームに値が入っていない (FAILED - 85)[0m
 [31m      Create Bookボタンが表示される (FAILED - 86)[0m
-  自分のユーザ詳細画面のテスト
-    表示の確認
-[31m      URLが正しい (FAILED - 87)[0m
-[31m      投稿一覧のユーザ画像のリンク先が正しい (FAILED - 88)[0m
-[31m      投稿一覧に自分の投稿のtitleが表示され、リンクが正しい (FAILED - 89)[0m
-[31m      投稿一覧に自分の投稿のbodyが表示される (FAILED - 90)[0m
-[31m      他人の投稿は表示されない (FAILED - 91)[0m
-    サイドバーの確認
-[31m      自分の名前と紹介文が表示される (FAILED - 92)[0m
-[31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 93)[0m
-[31m      「New book」と表示される (FAILED - 94)[0m
-[31m      titleフォームが表示される (FAILED - 95)[0m
-[31m      titleフォームに値が入っていない (FAILED - 96)[0m
-[31m      bodyフォームが表示される (FAILED - 97)[0m
-[31m      bodyフォームに値が入っていない (FAILED - 98)[0m
-[31m      Create Bookボタンが表示される (FAILED - 99)[0m
   自分のユーザ情報編集画面のテスト
     表示の確認
-[31m      URLが正しい (FAILED - 100)[0m
-[31m      名前編集フォームに自分の名前が表示される (FAILED - 101)[0m
-[31m      画像編集フォームが表示される (FAILED - 102)[0m
-[31m      自己紹介編集フォームに自分の自己紹介文が表示される (FAILED - 103)[0m
-[31m      Update Userボタンが表示される (FAILED - 104)[0m
+[31m      URLが正しい (FAILED - 87)[0m
+[31m      名前編集フォームに自分の名前が表示される (FAILED - 88)[0m
+[31m      画像編集フォームが表示される (FAILED - 89)[0m
+[31m      自己紹介編集フォームに自分の自己紹介文が表示される (FAILED - 90)[0m
+[31m      Update Userボタンが表示される (FAILED - 91)[0m
     更新成功のテスト
-[31m      nameが正しく更新される (FAILED - 105)[0m
-[31m      introductionが正しく更新される (FAILED - 106)[0m
-[31m      リダイレクト先が、自分のユーザ詳細画面になっている (FAILED - 107)[0m
+[31m      nameが正しく更新される (FAILED - 92)[0m
+[31m      introductionが正しく更新される (FAILED - 93)[0m
+[31m      リダイレクト先が、自分のユーザ詳細画面になっている (FAILED - 94)[0m
 
 [STEP3] 仕上げのテスト
   サクセスメッセージのテスト
-[31m    ユーザ新規登録成功時 (FAILED - 108)[0m
-[31m    ユーザログイン成功時 (FAILED - 109)[0m
-[31m    ユーザログアウト成功時 (FAILED - 110)[0m
-[31m    ユーザのプロフィール情報更新成功時 (FAILED - 111)[0m
-[31m    投稿データの新規投稿成功時: 投稿一覧画面から行います。 (FAILED - 112)[0m
-[31m    投稿データの更新成功時 (FAILED - 113)[0m
+[31m    ユーザ新規登録成功時 (FAILED - 95)[0m
+[31m    ユーザログイン成功時 (FAILED - 96)[0m
+[31m    ユーザログアウト成功時 (FAILED - 97)[0m
+[31m    ユーザのプロフィール情報更新成功時 (FAILED - 98)[0m
+[31m    投稿データの新規投稿成功時: 投稿一覧画面から行います。 (FAILED - 99)[0m
+[31m    投稿データの更新成功時 (FAILED - 100)[0m
   処理失敗時のテスト
     ユーザ新規登録失敗: nameを1文字にする
-[31m      新規登録されない (FAILED - 114)[0m
-[31m      新規登録画面を表示しており、フォームの内容が正しい (FAILED - 115)[0m
-[31m      バリデーションエラーが表示される (FAILED - 116)[0m
+[31m      新規登録されない (FAILED - 101)[0m
+[31m      新規登録画面を表示しており、フォームの内容が正しい (FAILED - 102)[0m
+[31m      バリデーションエラーが表示される (FAILED - 103)[0m
     ユーザのプロフィール情報編集失敗: nameを1文字にする
-[31m      更新されない (FAILED - 117)[0m
-[31m      ユーザ編集画面を表示しており、フォームの内容が正しい (FAILED - 118)[0m
-[31m      バリデーションエラーが表示される (FAILED - 119)[0m
+[31m      更新されない (FAILED - 104)[0m
+[31m      ユーザ編集画面を表示しており、フォームの内容が正しい (FAILED - 105)[0m
+[31m      バリデーションエラーが表示される (FAILED - 106)[0m
     投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする
-[31m      投稿が保存されない (FAILED - 120)[0m
-[31m      投稿一覧画面を表示している (FAILED - 121)[0m
-[31m      新規投稿フォームの内容が正しい (FAILED - 122)[0m
-[31m      バリデーションエラーが表示される (FAILED - 123)[0m
+[31m      投稿が保存されない (FAILED - 107)[0m
+[31m      投稿一覧画面を表示している (FAILED - 108)[0m
+[31m      新規投稿フォームの内容が正しい (FAILED - 109)[0m
+[31m      バリデーションエラーが表示される (FAILED - 110)[0m
     投稿データの更新失敗: titleを空にする
-[31m      投稿が更新されない (FAILED - 124)[0m
-[31m      投稿編集画面を表示しており、フォームの内容が正しい (FAILED - 125)[0m
-[31m      エラーメッセージが表示される (FAILED - 126)[0m
+[31m      投稿が更新されない (FAILED - 111)[0m
+[31m      投稿編集画面を表示しており、フォームの内容が正しい (FAILED - 112)[0m
+[31m      エラーメッセージが表示される (FAILED - 113)[0m
   ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する
-[31m    ユーザ一覧画面 (FAILED - 127)[0m
-[31m    ユーザ詳細画面 (FAILED - 128)[0m
-[31m    ユーザ情報編集画面 (FAILED - 129)[0m
-[31m    投稿一覧画面 (FAILED - 130)[0m
-[31m    投稿詳細画面 (FAILED - 131)[0m
-[31m    投稿編集画面 (FAILED - 132)[0m
+[31m    ユーザ一覧画面 (FAILED - 114)[0m
+[31m    ユーザ詳細画面 (FAILED - 115)[0m
+[31m    ユーザ情報編集画面 (FAILED - 116)[0m
+[31m    投稿一覧画面 (FAILED - 117)[0m
+[31m    投稿詳細画面 (FAILED - 118)[0m
+[31m    投稿編集画面 (FAILED - 119)[0m
   他人の画面のテスト
     他人の投稿詳細画面のテスト
       表示内容の確認
-[31m        URLが正しい (FAILED - 133)[0m
-[31m        「Book detail」と表示される (FAILED - 134)[0m
-[31m        ユーザ画像・名前のリンク先が正しい (FAILED - 135)[0m
-[31m        投稿のtitleが表示される (FAILED - 136)[0m
-[31m        投稿のopinionが表示される (FAILED - 137)[0m
-[31m        投稿の編集リンクが表示されない (FAILED - 138)[0m
-[31m        投稿の削除リンクが表示されない (FAILED - 139)[0m
+[31m        URLが正しい (FAILED - 120)[0m
+[31m        「Book detail」と表示される (FAILED - 121)[0m
+[31m        ユーザ画像・名前のリンク先が正しい (FAILED - 122)[0m
+[31m        投稿のtitleが表示される (FAILED - 123)[0m
+[31m        投稿のopinionが表示される (FAILED - 124)[0m
+[31m        投稿の編集リンクが表示されない (FAILED - 125)[0m
+[31m        投稿の削除リンクが表示されない (FAILED - 126)[0m
       サイドバーの確認
-[31m        他人の名前と紹介文が表示される (FAILED - 140)[0m
-[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 141)[0m
-[31m        自分の名前と紹介文は表示されない (FAILED - 142)[0m
-[31m        自分のユーザ編集画面へのリンクは存在しない (FAILED - 143)[0m
+[31m        他人の名前と紹介文が表示される (FAILED - 127)[0m
+[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 128)[0m
+[31m        自分の名前と紹介文は表示されない (FAILED - 129)[0m
+[31m        自分のユーザ編集画面へのリンクは存在しない (FAILED - 130)[0m
     他人の投稿編集画面
-[31m      遷移できず、投稿一覧画面にリダイレクトされる (FAILED - 144)[0m
+[31m      遷移できず、投稿一覧画面にリダイレクトされる (FAILED - 131)[0m
     他人のユーザ詳細画面のテスト
       表示の確認
-[31m        URLが正しい (FAILED - 145)[0m
-[31m        投稿一覧のユーザ画像のリンク先が正しい (FAILED - 146)[0m
-[31m        投稿一覧に他人の投稿のtitleが表示され、リンクが正しい (FAILED - 147)[0m
-[31m        投稿一覧に他人の投稿のopinionが表示される (FAILED - 148)[0m
-[31m        自分の投稿は表示されない (FAILED - 149)[0m
+[31m        URLが正しい (FAILED - 132)[0m
+[31m        投稿一覧のユーザ画像のリンク先が正しい (FAILED - 133)[0m
+[31m        投稿一覧に他人の投稿のtitleが表示され、リンクが正しい (FAILED - 134)[0m
+[31m        投稿一覧に他人の投稿のopinionが表示される (FAILED - 135)[0m
+[31m        自分の投稿は表示されない (FAILED - 136)[0m
       サイドバーの確認
-[31m        他人の名前と紹介文が表示される (FAILED - 150)[0m
-[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 151)[0m
-[31m        自分の名前と紹介文は表示されない (FAILED - 152)[0m
-[31m        自分のユーザ編集画面へのリンクは存在しない (FAILED - 153)[0m
+[31m        他人の名前と紹介文が表示される (FAILED - 137)[0m
+[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 138)[0m
+[31m        自分の名前と紹介文は表示されない (FAILED - 139)[0m
+[31m        自分のユーザ編集画面へのリンクは存在しない (FAILED - 140)[0m
     他人のユーザ情報編集画面
-[31m      遷移できず、自分のユーザ詳細画面にリダイレクトされる (FAILED - 154)[0m
+[31m      遷移できず、自分のユーザ詳細画面にリダイレクトされる (FAILED - 141)[0m
   グリッドシステムのテスト: container, row, col-md-〇を正しく使えている
-[31m    ユーザ一覧画面 (FAILED - 155)[0m
-[31m    ユーザ詳細画面 (FAILED - 156)[0m
-[31m    投稿一覧画面 (FAILED - 157)[0m
-[31m    投稿詳細画面 (FAILED - 158)[0m
+[31m    ユーザ一覧画面 (FAILED - 142)[0m
+[31m    ユーザ詳細画面 (FAILED - 143)[0m
+[31m    投稿一覧画面 (FAILED - 144)[0m
+[31m    投稿詳細画面 (FAILED - 145)[0m
   アイコンのテスト
     トップ画面
-[31m      本のアイコンが表示される (FAILED - 159)[0m
+[31m      本のアイコンが表示される (FAILED - 146)[0m
     アバウト画面
-[31m      本のアイコンが表示される (FAILED - 160)[0m
+[31m      本のアイコンが表示される (FAILED - 147)[0m
     ヘッダー: ログインしていない場合
-[31m      Homeリンクのアイコンが表示される (FAILED - 161)[0m
-[31m      Aboutリンクのアイコンが表示される (FAILED - 162)[0m
-[31m      Sign upリンクのアイコンが表示される (FAILED - 163)[0m
-[31m      Log inリンクのアイコンが表示される (FAILED - 164)[0m
+[31m      Homeリンクのアイコンが表示される (FAILED - 148)[0m
+[31m      Aboutリンクのアイコンが表示される (FAILED - 149)[0m
+[31m      Sign upリンクのアイコンが表示される (FAILED - 150)[0m
+[31m      Log inリンクのアイコンが表示される (FAILED - 151)[0m
     ヘッダー: ログインしている場合
-[31m      Homeリンクのアイコンが表示される (FAILED - 165)[0m
-[31m      Usersリンクのアイコンが表示される (FAILED - 166)[0m
-[31m      Booksリンクのアイコンが表示される (FAILED - 167)[0m
-[31m      Log outリンクのアイコンが表示される (FAILED - 168)[0m
+[31m      Homeリンクのアイコンが表示される (FAILED - 152)[0m
+[31m      Usersリンクのアイコンが表示される (FAILED - 153)[0m
+[31m      Booksリンクのアイコンが表示される (FAILED - 154)[0m
+[31m      Log outリンクのアイコンが表示される (FAILED - 155)[0m
     サイドバー
-[31m      ユーザ一覧画面でレンチアイコンが表示される (FAILED - 169)[0m
-[31m      ユーザ詳細画面でレンチアイコンが表示される (FAILED - 170)[0m
-[31m      投稿一覧画面でレンチアイコンが表示される (FAILED - 171)[0m
-[31m      投稿詳細画面でレンチアイコンが表示される (FAILED - 172)[0m
+[31m      ユーザ一覧画面でレンチアイコンが表示される (FAILED - 156)[0m
+[31m      ユーザ詳細画面でレンチアイコンが表示される (FAILED - 157)[0m
+[31m      投稿一覧画面でレンチアイコンが表示される (FAILED - 158)[0m
+[31m      投稿詳細画面でレンチアイコンが表示される (FAILED - 159)[0m
 
 Failures:
 
-  1) UsersController GET #edit ログインユーザーの場合 レスポンスが成功すること
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  1) UsersController GET #edit ログインユーザーの場合 @userが正しく設定されていること
+     [31mFailure/Error: expect(response.body).to include user.name[0m
      [31m[0m
-     [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "thao_hodkiewicz@abshire.example", name: "q4dpwnks73", introduction: "2jwlxj3aym3dkfpqhr6o", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/controllers/users_controller_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
+     [31m  expected "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Bookers2</title>\n    <meta name=\"viewport\" content=... <p>CopyRight Infratop.inc</p>\n      </div>\n    </div>\n  </div>\n</footer>\n  </body>\n</html>\n" to include "gmk7d9s5el"[0m
+     [31m  Diff:[0m[0m
+     [31m  [0m[34m@@ -1 +1,60 @@[0m
+     [31m  [0m[31m-gmk7d9s5el[0m
+     [31m  [0m[32m+<!DOCTYPE html>[0m
+     [31m  [0m[32m+<html>[0m
+     [31m  [0m[32m+  <head>[0m
+     [31m  [0m[32m+    <title>Bookers2</title>[0m
+     [31m  [0m[32m+    <meta name="viewport" content="width=device-width,initial-scale=1">[0m
+     [31m  [0m[32m+    [0m
+     [31m  [0m[32m+    [0m
+     [31m  [0m[32m+[0m
+     [31m  [0m[32m+    <script src="https://kit.fontawesome.com/960965aa67.js" crossorigin="anonymous"></script>[0m
+     [31m  [0m[32m+    [0m
+     [31m  [0m[32m+    <script src="/packs-test/js/application-0f8cf5d6e063f6e1d671.js" data-turbolinks-track="reload"></script>[0m
+     [31m  [0m[32m+  </head>[0m
+     [31m  [0m[32m+[0m
+     [31m  [0m[32m+  <body>[0m
+     [31m  [0m[32m+    <header>[0m
+     [31m  [0m[32m+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">[0m
+     [31m  [0m[32m+     <div class="container">[0m
+     [31m  [0m[32m+       <a class="navbar-brand" href="/"><span>Bookers</span></a>[0m
+     [31m  [0m[32m+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">[0m
+     [31m  [0m[32m+        <span class="navbar-toggler-icon"></span>[0m
+     [31m  [0m[32m+      </button>[0m
+     [31m  [0m[32m+      <div class="collapse navbar-collapse" id="navbarNavDropdown">[0m
+     [31m  [0m[32m+        <ul class="navbar-nav ml-auto">[0m
+     [31m  [0m[32m+            <li>[0m
+     [31m  [0m[32m+              <a class="nav-link text-light" href="/user/show">[0m
+     [31m  [0m[32m+              <i class="fa-solid fa-house"></i> Home[0m
+     [31m  [0m[32m+</a>            </li>[0m
+     [31m  [0m[32m+            <li>[0m
+     [31m  [0m[32m+              <a href="/user/edit?class=nav-link+text-light">[0m
+     [31m  [0m[32m+              <i class="fa-solid fa-users"></i> Users[0m
+     [31m  [0m[32m+</a>            </li>[0m
+     [31m  [0m[32m+            <li>[0m
+     [31m  [0m[32m+              <a href="/book/index?class=nav-link+text-light">[0m
+     [31m  [0m[32m+              <i class="fa-solid fa-book-open"></i> Books[0m
+     [31m  [0m[32m+</a>            </li>[0m
+     [31m  [0m[32m+            <li>[0m
+     [31m  [0m[32m+              <a class="nav-link text-light" rel="nofollow" data-method="delete" href="/users/sign_out">[0m
+     [31m  [0m[32m+              <i class="fa-solid fa-right-from-bracket"></i> Log out[0m
+     [31m  [0m[32m+</a>            </li>[0m
+     [31m  [0m[32m+        </ul>[0m
+     [31m  [0m[32m+       </div>[0m
+     [31m  [0m[32m+      </div>[0m
+     [31m  [0m[32m+    </nav>[0m
+     [31m  [0m[32m+  </header>[0m
+     [31m  [0m[32m+    <main>[0m
+     [31m  [0m[32m+      <h1>Users#edit</h1>[0m
+     [31m  [0m[32m+<p>Find me in app/views/users/edit.html.erb</p>[0m
+     [31m  [0m[32m+[0m
+     [31m  [0m[32m+    </main>[0m
+     [31m  [0m[32m+    <footer>[0m
+     [31m  [0m[32m+  <div class='container mt-5'>[0m
+     [31m  [0m[32m+    <div class='row'>[0m
+     [31m  [0m[32m+      <div class='mx-auto'>[0m
+     [31m  [0m[32m+        <p>CopyRight Infratop.inc</p>[0m
+     [31m  [0m[32m+      </div>[0m
+     [31m  [0m[32m+    </div>[0m
+     [31m  [0m[32m+  </div>[0m
+     [31m  [0m[32m+</footer>[0m
+     [31m  [0m[32m+  </body>[0m
+     [31m  [0m[32m+</html>[0m
+     [31m  [0m[0m
+     [36m# ./spec/controllers/users_controller_spec.rb:19:in `block (4 levels) in <top (required)>'[0m
 
-  2) UsersController GET #edit ログインユーザーの場合 @userが正しく設定されていること
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  2) Bookモデルのテスト バリデーションのテスト titleカラム 空欄でないこと
+     [31mFailure/Error: let!(:book) { build(:book, user_id: user.id) }[0m
      [31m[0m
      [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "ronald@stamm.test", name: "zdhdmnxvyz", introduction: "2vu43thnkc31fn3hp1vw", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/controllers/users_controller_spec.rb:4:in `block (2 levels) in <top (required)>'[0m
-
-  3) Bookモデルのテスト バリデーションのテスト titleカラム 空欄でないこと
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-     [31m[0m
-     [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "teresita_corkery@littel.test", name: "9167z5ogro", introduction: "un3y4x4lght98xj8hpos", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/models/book_spec.rb:7:in `block (3 levels) in <main>'[0m
+     [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
      [36m# ./spec/models/book_spec.rb:8:in `block (3 levels) in <main>'[0m
 
-  4) Bookモデルのテスト バリデーションのテスト bodyカラム 空欄でないこと
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  3) Bookモデルのテスト バリデーションのテスト bodyカラム 空欄でないこと
+     [31mFailure/Error: let!(:book) { build(:book, user_id: user.id) }[0m
      [31m[0m
      [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "micheal@graham.test", name: "p2fhch2y5o", introduction: "ywewh7d5x0mtd0vem65j", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/models/book_spec.rb:7:in `block (3 levels) in <main>'[0m
+     [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
      [36m# ./spec/models/book_spec.rb:8:in `block (3 levels) in <main>'[0m
 
-  5) Bookモデルのテスト バリデーションのテスト bodyカラム 200文字以下であること: 200文字は〇
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  4) Bookモデルのテスト バリデーションのテスト bodyカラム 200文字以下であること: 200文字は〇
+     [31mFailure/Error: let!(:book) { build(:book, user_id: user.id) }[0m
      [31m[0m
      [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "randall@hintz.test", name: "dcrw5bkzh2", introduction: "qs0usu1n6nwjvrjxhsbf", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/models/book_spec.rb:7:in `block (3 levels) in <main>'[0m
+     [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
      [36m# ./spec/models/book_spec.rb:8:in `block (3 levels) in <main>'[0m
 
-  6) Bookモデルのテスト バリデーションのテスト bodyカラム 200文字以下であること: 201文字は×
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  5) Bookモデルのテスト バリデーションのテスト bodyカラム 200文字以下であること: 201文字は×
+     [31mFailure/Error: let!(:book) { build(:book, user_id: user.id) }[0m
      [31m[0m
      [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "zack_kling@dickinson-reichel.example", name: "t0yitzqxfc", introduction: "mnev71ort65wmir4j9j3", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/models/book_spec.rb:7:in `block (3 levels) in <main>'[0m
+     [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
      [36m# ./spec/models/book_spec.rb:8:in `block (3 levels) in <main>'[0m
 
-  7) Bookモデルのテスト アソシエーションのテスト Userモデルとの関係 N:1となっている
+  6) Bookモデルのテスト アソシエーションのテスト Userモデルとの関係 N:1となっている
      [31mFailure/Error: expect(Book.reflect_on_association(:user).macro).to eq :belongs_to[0m
      [31m[0m
      [31mNoMethodError:[0m
@@ -353,71 +399,82 @@ Failures:
      [31m                                                   ^^^^^^[0m
      [36m# ./spec/models/book_spec.rb:36:in `block (4 levels) in <main>'[0m
 
-  8) Userモデルのテスト バリデーションのテスト nameカラム 空欄でないこと
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  7) Userモデルのテスト バリデーションのテスト nameカラム 空欄でないこと
+     [31mFailure/Error: is_expected.to eq false[0m
      [31m[0m
-     [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "charlie@johnston.test", name: "g2mmjxdz36", introduction: "2h3hgwaq5t9maxdy8yjy", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
-
-  9) Userモデルのテスト バリデーションのテスト nameカラム 2文字以上であること: 1文字は×
-     [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+     [31m  expected: false[0m
+     [31m       got: true[0m
      [31m[0m
-     [31mNoMethodError:[0m
-     [31m  undefined method `profile_image' for #<User id: nil, email: "priscila@hessel.test", name: "bgg3ka9zlr", introduction: "gl2utgvavuncobc2q6sd", created_at: nil, updated_at: nil>[0m
-     [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-     [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
+     [31m  (compared using ==)[0m
+     [31m[0m
+     [31m  Diff:[0m[0m
+     [31m  [0m[34m@@ -1 +1 @@[0m
+     [31m  [0m[31m-false[0m
+     [31m  [0m[32m+true[0m
+     [31m  [0m[0m
+     [36m# ./spec/models/user_spec.rb:13:in `block (4 levels) in <main>'[0m
 
-  10) Userモデルのテスト バリデーションのテスト nameカラム 2文字以上であること: 2文字は〇
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  8) Userモデルのテスト バリデーションのテスト nameカラム 2文字以上であること: 1文字は×
+     [31mFailure/Error: is_expected.to eq false[0m
+     [31m[0m
+     [31m  expected: false[0m
+     [31m       got: true[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [31m[0m
+     [31m  Diff:[0m[0m
+     [31m  [0m[34m@@ -1 +1 @@[0m
+     [31m  [0m[31m-false[0m
+     [31m  [0m[32m+true[0m
+     [31m  [0m[0m
+     [36m# ./spec/models/user_spec.rb:17:in `block (4 levels) in <main>'[0m
+
+  9) Userモデルのテスト バリデーションのテスト nameカラム 20文字以下であること: 21文字は×
+     [31mFailure/Error: is_expected.to eq false[0m
+     [31m[0m
+     [31m  expected: false[0m
+     [31m       got: true[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [31m[0m
+     [31m  Diff:[0m[0m
+     [31m  [0m[34m@@ -1 +1 @@[0m
+     [31m  [0m[31m-false[0m
+     [31m  [0m[32m+true[0m
+     [31m  [0m[0m
+     [36m# ./spec/models/user_spec.rb:29:in `block (4 levels) in <main>'[0m
+
+  10) Userモデルのテスト バリデーションのテスト nameカラム 一意性があること
+      [31mFailure/Error: is_expected.to eq false[0m
       [31m[0m
-      [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "felipe@hoeger.example", name: "4rndz9wqb1", introduction: "iz8bzo6d8ieab3b6sdyu", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
-
-  11) Userモデルのテスト バリデーションのテスト nameカラム 20文字以下であること: 20文字は〇
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+      [31m  expected: false[0m
+      [31m       got: true[0m
       [31m[0m
-      [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "steven_reichert@steuber-kunze.test", name: "g98sxpcgxv", introduction: "fm634tfabtj07r47ozri", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
-
-  12) Userモデルのテスト バリデーションのテスト nameカラム 20文字以下であること: 21文字は×
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+      [31m  (compared using ==)[0m
       [31m[0m
-      [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "olive_dibbert@dach.test", name: "0l5m9df9d6", introduction: "xpsjr75hdhnzmmpgnc34", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
+      [31m  Diff:[0m[0m
+      [31m  [0m[34m@@ -1 +1 @@[0m
+      [31m  [0m[31m-false[0m
+      [31m  [0m[32m+true[0m
+      [31m  [0m[0m
+      [36m# ./spec/models/user_spec.rb:33:in `block (4 levels) in <main>'[0m
 
-  13) Userモデルのテスト バリデーションのテスト nameカラム 一意性があること
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  11) Userモデルのテスト バリデーションのテスト introductionカラム 50文字以下であること: 51文字は×
+      [31mFailure/Error: is_expected.to eq false[0m
       [31m[0m
-      [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "jackie_green@kulas.test", name: "gpnlz5ib8d", introduction: "bm9hsk1d4dpq6pa3dpg7", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
-
-  14) Userモデルのテスト バリデーションのテスト introductionカラム 50文字以下であること: 50文字は〇
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+      [31m  expected: false[0m
+      [31m       got: true[0m
       [31m[0m
-      [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "rufus_effertz@schneider-torp.test", name: "76ifxpf5ea", introduction: "ujg2twd6vvnb0lacoifn", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
-
-  15) Userモデルのテスト バリデーションのテスト introductionカラム 50文字以下であること: 51文字は×
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+      [31m  (compared using ==)[0m
       [31m[0m
-      [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "everette@kshlerin.test", name: "rcmz7rur45", introduction: "ja9awhsq35n2whz4jz6e", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/models/user_spec.rb:7:in `block (3 levels) in <main>'[0m
+      [31m  Diff:[0m[0m
+      [31m  [0m[34m@@ -1 +1 @@[0m
+      [31m  [0m[31m-false[0m
+      [31m  [0m[32m+true[0m
+      [31m  [0m[0m
+      [36m# ./spec/models/user_spec.rb:44:in `block (4 levels) in <main>'[0m
 
-  16) Userモデルのテスト アソシエーションのテスト Bookモデルとの関係 1:Nとなっている
+  12) Userモデルのテスト アソシエーションのテスト Bookモデルとの関係 1:Nとなっている
       [31mFailure/Error: expect(User.reflect_on_association(:books).macro).to eq :has_many[0m
       [31m[0m
       [31mNoMethodError:[0m
@@ -427,7 +484,7 @@ Failures:
       [31m                                                    ^^^^^^[0m
       [36m# ./spec/models/user_spec.rb:52:in `block (4 levels) in <main>'[0m
 
-  17) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしていない場合 リンクの内容を確認 Aboutを押すと、アバウト画面に遷移する
+  13) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしていない場合 リンクの内容を確認 Aboutを押すと、アバウト画面に遷移する
       [31mFailure/Error: is_expected.to eq '/home/about'[0m
       [31m[0m
       [31m  expected: "/home/about"[0m
@@ -436,1271 +493,1031 @@ Failures:
       [31m  (compared using ==)[0m
       [36m# ./spec/system/01_before_login_spec.rb:93:in `block (4 levels) in <main>'[0m
 
-  18) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 新規登録成功のテスト 正しく新規登録される
-      [31mFailure/Error: <%= image_tag @user.profile_image_url %>[0m
-      [31m[0m
-      [31mActionView::Template::Error:[0m
-      [31m  undefined method `profile_image_url' for #<User id: 1, email: "thaddeus@hauck.test", name: "69dvq6h9zr", introduction: nil, created_at: "2025-02-23 07:20:21.299806000 +0000", updated_at: "2025-02-23 07:20:21.299806000 +0000">[0m
-      [36m# ./app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb__829106647934790690_22960'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:148:in `block (5 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:148:in `block (4 levels) in <main>'[0m
-      [36m# ------------------[0m
-      [36m# --- Caused by: ---[0m
-      [36m# NoMethodError:[0m
-      [36m#   undefined method `profile_image_url' for #<User id: 1, email: "thaddeus@hauck.test", name: "69dvq6h9zr", introduction: nil, created_at: "2025-02-23 07:20:21.299806000 +0000", updated_at: "2025-02-23 07:20:21.299806000 +0000">[0m
-      [36m#   ./app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb__829106647934790690_22960'[0m
+  14) [STEP1] ユーザログイン前のテスト ユーザログアウトのテスト ログアウト機能のテスト 正しくログアウトできている: ログアウト後のリダイレクト先においてAbout画面へのリンクが存在する
+      [31mFailure/Error: expect(page).to have_link '', href: '/home/about'[0m
+      [31m  expected to find link "" with href "/home/about" but there were no matches[0m
+      [36m# ./spec/system/01_before_login_spec.rb:259:in `block (4 levels) in <main>'[0m
 
-  19) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 新規登録成功のテスト 新規登録後のリダイレクト先が、新規登録できたユーザの詳細画面になっている
-      [31mFailure/Error: <%= image_tag @user.profile_image_url %>[0m
+  15) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Homeを押すと、自分のユーザ詳細画面に遷移する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
-      [31mActionView::Template::Error:[0m
-      [31m  undefined method `profile_image_url' for #<User id: 1, email: "tanja@sipes-jerde.example", name: "jehnq9tyih", introduction: nil, created_at: "2025-02-23 07:20:21.369877000 +0000", updated_at: "2025-02-23 07:20:21.369877000 +0000">[0m
-      [36m# ./app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb__829106647934790690_22960'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:151:in `block (4 levels) in <main>'[0m
-      [36m# ------------------[0m
-      [36m# --- Caused by: ---[0m
-      [36m# NoMethodError:[0m
-      [36m#   undefined method `profile_image_url' for #<User id: 1, email: "tanja@sipes-jerde.example", name: "jehnq9tyih", introduction: nil, created_at: "2025-02-23 07:20:21.369877000 +0000", updated_at: "2025-02-23 07:20:21.369877000 +0000">[0m
-      [36m#   ./app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb__829106647934790690_22960'[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  20) [STEP1] ユーザログイン前のテスト ユーザログイン ログイン成功のテスト ログイン後のリダイレクト先が、ログインしたユーザの詳細画面になっている
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  16) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Usersを押すと、ユーザ一覧画面に遷移する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "shon.weber@powlowski.example", name: "q0vbr7eeac", introduction: "ek98suv3ls8zrthy962l", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:158:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:187:in `block (4 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  21) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  17) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Booksを押すと、投稿一覧画面に遷移する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "becki@hintz.test", name: "elxha627fu", introduction: "tniyv0bhsk4oz0uu1dp5", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:211:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:215:in `block (3 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  22) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Homeリンクが表示される: 左上から2番目のリンクが「Home」である
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  18) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 URLが正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "lenard@zboncak.example", name: "9lb7523d06", introduction: "2ozakaylspwtwbhagdwz", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:211:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:215:in `block (3 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  23) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Usersリンクが表示される: 左上から3番目のリンクが「Users」である
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  19) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分と他人の画像のリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "terisa.dietrich@rempel.test", name: "zf00hjo0y4", introduction: "egey4nx2k76szoceqj6t", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:211:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:215:in `block (3 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  24) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Booksリンクが表示される: 左上から4番目のリンクが「Books」である
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  20) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のタイトルのリンク先がそれぞれ正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "vinita_yundt@graham-hessel.example", name: "ysvw1zir9u", introduction: "trzlhbtedjnarbg7rueo", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:211:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:215:in `block (3 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  25) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Log outリンクが表示される: 左上から5番目のリンクが「Log out」である
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  21) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のオピニオンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "gena_bergnaum@emmerich-murphy.example", name: "cbhr21y7uo", introduction: "qwrknokkv5tmrsrb5zzu", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:211:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:215:in `block (3 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  26) [STEP1] ユーザログイン前のテスト ユーザログアウトのテスト ログアウト機能のテスト 正しくログアウトできている: ログアウト後のリダイレクト先においてAbout画面へのリンクが存在する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  22) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "pia_will@abshire-dietrich.test", name: "24yc5uwit8", introduction: "ux3e6nun9311jxnqzodk", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:245:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:249:in `block (3 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  27) [STEP1] ユーザログイン前のテスト ユーザログアウトのテスト ログアウト機能のテスト ログアウト後のリダイレクト先が、トップになっている
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  23) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "shayne.stanton@goldner.example", name: "lt0hdq184s", introduction: "99cail2q9i7bp0419nr0", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:245:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/01_before_login_spec.rb:249:in `block (3 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  28) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Homeを押すと、自分のユーザ詳細画面に遷移する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  24) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New book」と表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "mariah@koepp-romaguera.test", name: "rkfahtelyz", introduction: "0gjz3xp91fmmhbew90m7", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  29) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Usersを押すと、ユーザ一覧画面に遷移する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  25) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "pearl.nienow@steuber.example", name: "cq06jfcugd", introduction: "rbv3x6m2a6pwhmlrnheq", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  30) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Booksを押すと、投稿一覧画面に遷移する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  26) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "hobert@wunsch-heller.test", name: "bji5iawrrc", introduction: "zpqvbvgka1dbhcyqu4ej", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  31) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 URLが正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  27) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "joshua@torp.test", name: "n68k57zyre", introduction: "2m082b3vnxk5l8qyj2yd", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  32) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分と他人の画像のリンク先が正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  28) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "ellsworth.jaskolski@collins.test", name: "umu2n3hmhb", introduction: "kx9a3du3ug8v4ihl01gu", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  33) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のタイトルのリンク先がそれぞれ正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  29) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "omar@hayes.test", name: "68nt3vtlyj", introduction: "d0hxbqnuv11j42ax55ch", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  34) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のオピニオンが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  30) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "venus_bartell@nolan.example", name: "69tb8yga5l", introduction: "wa4vs7rl24xzybiv4gya", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  35) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  31) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト リダイレクト先が、保存できた投稿の詳細画面になっている
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "valery@aufderhar.test", name: "pg9m44fh1e", introduction: "7xaj388bdkvdi23u6kz4", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  36) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  32) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 URLが正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "bruno_prohaska@skiles-cartwright.test", name: "7zxamgzrb6", introduction: "u00zad9q2juqxabj1qyu", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  37) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  33) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "audria.collier@wunsch-sanford.example", name: "znwxsefgrv", introduction: "q299r8xmhp7jxm37hroi", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  38) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  34) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "honey@dubuque.example", name: "4e606nwj59", introduction: "8frjiyxujcdofqx4y838", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  39) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  35) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "efren@okon.test", name: "zjb8mitf8d", introduction: "eh4bg2zjxfjxdxx3bfb5", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  40) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  36) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のbodyが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "arturo_mohr@fay.test", name: "0cihvo4wqm", introduction: "2judh4ftbas5qd99u2je", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  41) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  37) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿の編集リンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "cletus@schaden.example", name: "yc1sxpl8uu", introduction: "mrgwjdvmaf165w69c4cg", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  42) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  38) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "malcolm.rippin@jacobi.example", name: "iuq0hg6y9x", introduction: "xx5iinc19njfrryr5tv3", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  43) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  39) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "geoffrey@cummings.test", name: "238e603k8n", introduction: "4x398dldkk4x7qhx33x8", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  44) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト リダイレクト先が、保存できた投稿の詳細画面になっている
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  40) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "newton@herzog-jakubowski.example", name: "wreld4sd2j", introduction: "cjel51kn65oxeap8q47d", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  45) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 URLが正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  41) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New book」と表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "john.rempel@doyle-okuneva.example", name: "bse67b3xny", introduction: "ghki7dledaftdggdrqs6", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  46) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  42) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "loren@wisoky-block.example", name: "n449ip6up7", introduction: "xho4x6hedijwce06w72z", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  47) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  43) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "apolonia_witting@parisian.example", name: "uc12fh66by", introduction: "53zqd9h8nz3997s8ubgg", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  48) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  44) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "marcos_farrell@weissnat-leannon.test", name: "1ige947byw", introduction: "ii8a9tw9pbjg9knbjnuj", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  49) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のbodyが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  45) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "bradly_hintz@bernhard-daugherty.example", name: "lgr7ek1zih", introduction: "qhlx9t3860lnybro0uvz", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  50) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿の編集リンクが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  46) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "marilee@leffler.example", name: "iz0mh5cgzj", introduction: "g34a44uikb452mqnnuo6", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  51) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  47) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "kurt.zemlak@herman-wyman.test", name: "hi05fs7isz", introduction: "z6p7qku63hw1y7kqq33s", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  52) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  48) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 編集リンクのテスト 編集画面に遷移する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "mariel_bechtelar@mills-wisozk.example", name: "urozpqmaxu", introduction: "ou2cd2n8rnz1z2fyr6lf", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  53) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  49) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト application.html.erbにjavascript_pack_tagを含んでいる
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "ezra@hickle.example", name: "2kwenw5nba", introduction: "ezzpy4ezetepb0vlzcoa", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  54) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  50) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト 正しく削除される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "danuta@bode.test", name: "lks9xu2xar", introduction: "9okwos24rs73wxylintz", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  55) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  51) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト リダイレクト先が、投稿一覧画面になっている
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "celine@hackett.example", name: "kvdynr7c3q", introduction: "idbvw1rsyk844imay7vc", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  56) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  52) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 URLが正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "cammy@fay.test", name: "trecmd4g3q", introduction: "uo78c0igkuj1xd5xqla5", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  57) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  53) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Book」と表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "john_toy@wilderman.example", name: "7qtz81byk9", introduction: "d2rq7qa1cpi79oemo66l", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  58) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  54) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 title編集フォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "antony@damore.example", name: "4w6ayiz1qm", introduction: "103g82muoxb11qw6az36", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  59) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  55) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 body編集フォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "angelica@kozey.example", name: "t33ij8eq81", introduction: "hiqut0tmzrf4mlk0kf0z", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  60) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  56) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Update Bookボタンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "larae_kertzmann@lang.test", name: "cvxfy3x1s0", introduction: "i8g2urxjh9yax2vyz74e", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  61) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 編集リンクのテスト 編集画面に遷移する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  57) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Showリンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "pedro.kirlin@mitchell-brown.example", name: "gwpjg4ong4", introduction: "rhwemzuhuy644y5hkd5x", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  62) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト application.html.erbにjavascript_pack_tagを含んでいる
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  58) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Backリンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "marinda.wehner@emard-wolff.test", name: "nyjzyu2b3x", introduction: "euuewyb789wdx39p1i6b", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  63) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト 正しく削除される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  59) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "jamel@bergnaum-heller.test", name: "lcxy2fzqzj", introduction: "1zrkbue2kvmzpef0d1fn", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  64) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト リダイレクト先が、投稿一覧画面になっている
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  60) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "derek.sporer@gulgowski-ruecker.example", name: "eg9n333vxf", introduction: "jrt6v47l8mkf3mbzliah", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  65) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 URLが正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  61) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "france@sanford.test", name: "h2qqz6jq1b", introduction: "fvg5i0ajrptgdur62l66", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  66) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Book」と表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  62) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 URLが正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "warren_kirlin@stark.example", name: "jj7smjtp0a", introduction: "zywkrfvzwoznapl1ne7n", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  67) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 title編集フォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  63) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "seth@greenfelder.example", name: "yvrg1jj9nd", introduction: "fahlbwlfz1lsyeqqyxcg", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  68) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 body編集フォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  64) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人の名前がそれぞれ表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "miguel@mclaughlin-swift.test", name: "kn35vyrjh5", introduction: "tu8lrkucpvc527p5tmd4", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  69) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Update Bookボタンが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  65) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "shameka@marks-greenfelder.test", name: "4mm9chc14h", introduction: "1mzmra9zl482ttpnbkih", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  70) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Showリンクが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  66) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "martin@boehm-hintz.test", name: "r5uypruzeb", introduction: "o4n91c6jtoo5o2uyhrby", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  71) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Backリンクが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  67) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "latesha.tromp@kuhlman.example", name: "4cvyepkr1q", introduction: "5li2vnuxeqlbuzf65ush", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  72) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  68) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New book」と表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "rory.quigley@effertz.example", name: "e6gyra3awg", introduction: "b03uwiwueaid6rpo5xnd", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  73) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  69) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "abel@erdman.test", name: "04rz7kkgw0", introduction: "on1vcewb81usgret6tho", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  74) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  70) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "vicenta@gutkowski-kerluke.example", name: "i6jcj33y1f", introduction: "p9punzu7kp3u6bwzl9mw", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  75) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 URLが正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  71) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "lee@blanda.test", name: "l4aatkisqt", introduction: "xpv8muq6ti89k07ply9x", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  76) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  72) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "mark.turcotte@padberg-bernhard.example", name: "wctcp4vcz1", introduction: "dsqe2c04k9nocxhi4jwg", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  77) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人の名前がそれぞれ表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  73) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "francisco.bogisich@waelchi.example", name: "aoqjj4nhzx", introduction: "tnbaov6k0ntxjpdclqz2", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  78) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  74) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 URLが正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "andreas_boyer@oberbrunner.test", name: "c1f9ef79u7", introduction: "ilfyp0rlwaa5jkmkye7v", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  79) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  75) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "cyrstal_kertzmann@daniel.example", name: "etz0kjgx65", introduction: "idc8ymeuntze78bhs45v", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  80) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  76) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のtitleが表示され、リンクが正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "pedro@jenkins-wiegand.example", name: "n9ap7ahi0f", introduction: "n0yqzbtxq1bjr7qvxf8o", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  81) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  77) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のbodyが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "jean.hills@wehner.test", name: "b7cnan4emi", introduction: "7fbnmip82xlgpst5bmfk", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  82) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  78) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 他人の投稿は表示されない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "rosia@turner-keeling.test", name: "q7uwtsx0j0", introduction: "79pamyew79a2hrn0fhgd", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  83) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  79) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "bobbie@leannon-schneider.example", name: "o7edx3p0rq", introduction: "piu05urgnzrylb9hj9vr", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  84) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  80) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "eugene_kerluke@carroll.example", name: "dgf6hyjozn", introduction: "mvpcj99lw1qm3dqpqqk0", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  85) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  81) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New book」と表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "bret_stanton@muller.example", name: "gn6zn3nbl3", introduction: "mjkkmovjx23oaefswb7o", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  86) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  82) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "edison.kuhn@simonis-tillman.test", name: "rfovz31nc9", introduction: "nloxvufkvaqzf0dc1g6q", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  87) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 URLが正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  83) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "charley@paucek.example", name: "6u9yqboqih", introduction: "2aes3ogobsnpzcnfv517", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  88) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  84) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "janette@reichert.test", name: "lzd6g5qtm6", introduction: "bvir7uqt8wcjfedgxs0w", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  89) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のtitleが表示され、リンクが正しい
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  85) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "zula@greenfelder-weissnat.test", name: "rbosctx19w", introduction: "e5o3tb3if5b39kr9ife4", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  90) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のbodyが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  86) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "morris@romaguera.example", name: "tzv9sf1b3k", introduction: "glay451erjdix44q41e3", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  91) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 他人の投稿は表示されない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  87) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 URLが正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "erin_pacocha@thiel-lindgren.example", name: "f1hv92fbw0", introduction: "44aihw1c5zoz58muyp9h", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  92) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  88) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 名前編集フォームに自分の名前が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "esteban@cronin.test", name: "2jfznwnst7", introduction: "siqg3sal35zxjsltjxgj", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  93) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  89) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 画像編集フォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "angel_muller@mante-hilll.test", name: "z3co5pmox6", introduction: "5q6mjg39l54utqbbfpix", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  94) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  90) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 自己紹介編集フォームに自分の自己紹介文が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "jay.howe@renner.example", name: "klks9c301r", introduction: "a6d696ic4cscr0v886fn", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  95) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  91) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 Update Userボタンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "connie@okon.test", name: "ekof5swl6w", introduction: "4hv9f3qrordise1amhlq", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  96) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  92) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト nameが正しく更新される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "jettie@daugherty-gerlach.test", name: "6fgg7htnnk", introduction: "gvfqta58fy9177757720", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  97) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  93) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト introductionが正しく更新される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "kip_hoppe@hilll.test", name: "ani950zdia", introduction: "617fid4xrcfu2mfazgeb", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  98) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  94) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト リダイレクト先が、自分のユーザ詳細画面になっている
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "marty@stiedemann.test", name: "fu09292ucv", introduction: "yz7hv0sji7434a6p3vn0", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/02_after_login_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  99) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  95) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザ新規登録成功時
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
       [31m[0m
       [31mNoMethodError:[0m
-      [31m  undefined method `profile_image' for #<User id: nil, email: "korey@spinka-lehner.test", name: "asekhywg4x", introduction: "dhd2hongxyd33w3yapce", created_at: nil, updated_at: nil>[0m
-      [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-      [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  100) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 URLが正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "warren.hettinger@gibson.test", name: "7xzauqn2rn", introduction: "djcajsbjo3dawm5e0jfl", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  101) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 名前編集フォームに自分の名前が表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "michel_waters@oconner.example", name: "mdvaplonx5", introduction: "o439ti26s9p1x9uwpoha", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  102) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 画像編集フォームが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "nancy.harvey@flatley.example", name: "1l63u3i6v3", introduction: "26da05op34jmxehrsowz", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  103) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 自己紹介編集フォームに自分の自己紹介文が表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "denis_wolff@grady.example", name: "1ky2si40c7", introduction: "w8trj6ni5utr5hciq4lb", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  104) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 Update Userボタンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "lon.conroy@rice-sawayn.example", name: "1eqgmtlq65", introduction: "v1cegel451la4fmjpv7l", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  105) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト nameが正しく更新される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "genaro@christiansen-flatley.test", name: "fdn8iz0n4y", introduction: "847bl4qxroghownvdb0q", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  106) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト introductionが正しく更新される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "sommer@ziemann-connelly.example", name: "47jd0lmcse", introduction: "scijhnp5fw0c7pz4nvn2", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  107) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 更新成功のテスト リダイレクト先が、自分のユーザ詳細画面になっている
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "byron@hodkiewicz.test", name: "iumuvwrz5p", introduction: "751db8djhh4zjkby02u4", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/02_after_login_spec.rb:4:in `block (2 levels) in <main>'[0m
-
-  108) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザ新規登録成功時
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "karoline@zieme.example", name: "zto5rle0pa", introduction: "jgns9fr0o7tca26acgrr", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  109) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログイン成功時
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "ed.pollich@kertzmann.example", name: "fxzub28s8i", introduction: "26eu7cby2y7yx3c81whp", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+  96) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログイン成功時
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  110) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログアウト成功時
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "leonia@osinski-baumbach.test", name: "f1f17hv09f", introduction: "1k57eiyer6kad7zdggef", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+  97) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログアウト成功時
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  111) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザのプロフィール情報更新成功時
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "jacinto@hagenes.example", name: "ttjivhecit", introduction: "g7c9kumpnctu3well7ol", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+  98) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザのプロフィール情報更新成功時
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  112) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの新規投稿成功時: 投稿一覧画面から行います。
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
-       [31m[0m
-       [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "angel.kuphal@swift.example", name: "bqfbta1mbr", introduction: "t9vtmztjakzdoc7ke2lx", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+  99) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの新規投稿成功時: 投稿一覧画面から行います。
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+      [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  113) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの更新成功時
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  100) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの更新成功時
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "edwin.koelpin@ratke.test", name: "ecgqxgbw0c", introduction: "bnlo6ryttkuw08zbruig", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  114) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする 新規登録されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  101) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする 新規登録されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "claire@murray.example", name: "rl5r5vilg5", introduction: "4d5529jc71fy6qijvw58", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  115) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする 新規登録画面を表示しており、フォームの内容が正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  102) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする 新規登録画面を表示しており、フォームの内容が正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "shawana_harris@hauck.test", name: "s9q6xf1lba", introduction: "mf9vt6g8lo3hmv4mwc6n", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  116) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする バリデーションエラーが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  103) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザ新規登録失敗: nameを1文字にする バリデーションエラーが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "louise.mante@beatty.test", name: "dc08gc59n3", introduction: "8rve1kd7wnd1zlht03r8", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  117) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする 更新されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  104) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする 更新されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "tarra@wintheiser.test", name: "jiwihlvt5z", introduction: "g3svpoevmz5384zbr9gf", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  118) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする ユーザ編集画面を表示しており、フォームの内容が正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  105) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする ユーザ編集画面を表示しており、フォームの内容が正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "maynard.zemlak@kihn.example", name: "dx522ygs8g", introduction: "k4x3k9r3iji7a56g0uar", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  119) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする バリデーションエラーが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  106) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする バリデーションエラーが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "leta.abshire@runte.example", name: "n6kr3j6bxf", introduction: "k81t7nrqwkj9ncoeunyl", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  120) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿が保存されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  107) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿が保存されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "hyun@kassulke.test", name: "e3kvk1qt0x", introduction: "6cyjhweepimpyd4dsmkf", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  121) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿一覧画面を表示している
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  108) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿一覧画面を表示している
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "karisa_wolff@bauch-gutkowski.example", name: "2355n0ug5c", introduction: "j7236h6433w6cvyeje6x", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  122) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 新規投稿フォームの内容が正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  109) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 新規投稿フォームの内容が正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "gregg@daugherty.example", name: "fvbfk8wtxe", introduction: "1lnaeokdau9c1rrs4tf3", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  123) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする バリデーションエラーが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  110) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする バリデーションエラーが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "marylyn@volkman-klein.example", name: "yzcstnq89l", introduction: "0ygvni72eo2y7xh8vwnq", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  124) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿が更新されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  111) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿が更新されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "kieth.jaskolski@hills.example", name: "4hvvikkq4z", introduction: "rjjowrtmoefapev4tprb", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  125) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿編集画面を表示しており、フォームの内容が正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  112) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿編集画面を表示しており、フォームの内容が正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "mertie@koelpin-reynolds.test", name: "k16ipapyxc", introduction: "0tylmrq735tlxl7n6jyt", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  126) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする エラーメッセージが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  113) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする エラーメッセージが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "sophie_konopelski@abernathy.test", name: "cfsjmure1v", introduction: "69kbw6saapi7pkekz001", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  127) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ一覧画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  114) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ一覧画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "rosemary@wehner.test", name: "f6i74k7va7", introduction: "cd1kx1swbqlfxr14tbmw", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  128) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ詳細画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  115) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ詳細画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "carol@schinner.test", name: "cd0qo4zwtt", introduction: "j36u1h2oar8sdiz5cijg", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  129) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ情報編集画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  116) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ情報編集画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "devon@bayer.test", name: "kq4eg5rudt", introduction: "96rk6ilw431z7j1v21bt", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  130) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿一覧画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  117) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿一覧画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "bradley@rowe.test", name: "dhpzuh0p2y", introduction: "3e0fzy5656hf5idtzb6e", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  131) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿詳細画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  118) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿詳細画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "garnet.stark@quigley.test", name: "j4m25lk5e6", introduction: "79hk8hufq1uklt06jxzl", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  132) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿編集画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  119) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿編集画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "jamie.lueilwitz@zieme-dibbert.test", name: "itamr8ovyo", introduction: "snnqyn23crfr108kz6q4", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  133) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 URLが正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  120) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 URLが正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "winford@dubuque.test", name: "rrvs0uizbq", introduction: "r1lcr049qfi8tnphtqk7", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  134) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  121) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "kelley.reynolds@kunze.test", name: "tvhca1chla", introduction: "f8si4in9c7rjp57nhv10", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  135) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  122) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "kenda.ortiz@maggio.test", name: "uykag1nbif", introduction: "ay3wsi9osb6ycumnxm9m", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  136) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  123) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "jay.emard@tillman.example", name: "tbhih1g32n", introduction: "gsw7oocvrmxuayn68ha6", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  137) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  124) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "pete_grimes@wiegand.example", name: "xc35qmxtx1", introduction: "kgq7fxljkk5osymcej4x", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  138) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の編集リンクが表示されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  125) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の編集リンクが表示されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "stephan.bednar@hoeger-okuneva.test", name: "eqad73opoa", introduction: "kyvdwehkgkxkgnv21naz", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  139) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  126) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "tamatha.lueilwitz@sawayn.example", name: "gsoehjijcm", introduction: "v5axk8i89lq0q13wgw4j", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  140) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  127) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "waylon@klocko.example", name: "7d32k930tj", introduction: "o2i4wz6mzztlfhf7fgzc", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  141) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  128) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "alex.metz@schoen.example", name: "pymqxj3avi", introduction: "s4i4hdnprt4d3g49vgyt", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  142) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  129) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "amado@rutherford-weber.example", name: "p38hvet213", introduction: "81yy8sthj6hiiiivny92", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  143) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  130) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "domingo@fisher-kessler.example", name: "1gdluhf00h", introduction: "w305gmrdtvhv2jpxmsyc", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  144) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  131) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "laurette_becker@stiedemann-runte.example", name: "lgcd9xtj5h", introduction: "9bnmjrszyzgj7s4fmxse", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  145) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 URLが正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  132) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 URLが正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "joi_carter@hintz-bosco.test", name: "b4pkl699k0", introduction: "tjhskcjov23vgibfb8xu", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  146) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  133) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "deborah@pfannerstill-swaniawski.example", name: "buu1rh64zv", introduction: "tcnihj6aanhd45k2kem0", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  147) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のtitleが表示され、リンクが正しい
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  134) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のtitleが表示され、リンクが正しい
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "kanesha.schaefer@morar.test", name: "ahafh84aus", introduction: "bwfiulk4kfeqcoaiixzt", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  148) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のopinionが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  135) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のopinionが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "milan.von@langosh-johnson.test", name: "36la4c8huf", introduction: "h8ans9zjo0l8rydemxqo", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  149) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 自分の投稿は表示されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  136) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 自分の投稿は表示されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "sidney@deckow.test", name: "yilpezpr6g", introduction: "9tnvv8zecbp7xs2lkj6o", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  150) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  137) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "sueann@buckridge.example", name: "mffuyzobxz", introduction: "hyzgeqimp4n6kdv4c5ou", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  151) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  138) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "digna@reichert.example", name: "n47ufmgdzq", introduction: "x5y8uikdrcrrbvlaw3sc", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  152) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  139) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "claretha_wilkinson@schmidt.example", name: "xg9spjnblm", introduction: "un3xpwids2npw3gcjm7y", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  153) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  140) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "robt_bartell@okon-reichert.test", name: "a3z5v16vy7", introduction: "r9t43grz5o4jzfmlrzwj", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  154) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ情報編集画面 遷移できず、自分のユーザ詳細画面にリダイレクトされる
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  141) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ情報編集画面 遷移できず、自分のユーザ詳細画面にリダイレクトされる
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "joaquina@bailey-rosenbaum.test", name: "x1tf4qbayo", introduction: "cf2ckd2kcvygv7mgzj6p", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  155) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ一覧画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  142) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ一覧画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "ernest.okeefe@koch-dicki.test", name: "qoz520olbw", introduction: "0yph94n3h6vuujlqoyca", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  156) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ詳細画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  143) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ詳細画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "amy_rempel@breitenberg-runte.test", name: "bd5k3dcyzj", introduction: "qit295j0y4hjc4xlimwl", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  157) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている 投稿一覧画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  144) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている 投稿一覧画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "merlin@schimmel.test", name: "3dx1xql246", introduction: "wyyq9kb2uzvn6sigqbpf", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  158) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている 投稿詳細画面
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  145) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている 投稿詳細画面
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "yi.hammes@kozey-hintz.example", name: "sb8colx61g", introduction: "kk3u40r3p91lzg88gguq", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  159) [STEP3] 仕上げのテスト アイコンのテスト トップ画面 本のアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  146) [STEP3] 仕上げのテスト アイコンのテスト トップ画面 本のアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "pilar.luettgen@jones.test", name: "uwmp1yztvo", introduction: "5283cu4az9veudqr6wqj", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  160) [STEP3] 仕上げのテスト アイコンのテスト アバウト画面 本のアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  147) [STEP3] 仕上げのテスト アイコンのテスト アバウト画面 本のアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "wiley@rosenbaum-wolf.example", name: "a3mbsjemgf", introduction: "ed5d48h1p53m4gg2sdkf", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  161) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Homeリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  148) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Homeリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "chasity@cummings.example", name: "ejcbphsc7a", introduction: "6q7agrrryj0k0r8hmho4", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  162) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Aboutリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  149) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Aboutリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "mervin.grimes@dickens-gislason.example", name: "8j5kz3fa5e", introduction: "ses33jd37lu3egu9wgby", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  163) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Sign upリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  150) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Sign upリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "wai.kuhlman@ohara.example", name: "ielilrvl2o", introduction: "sozvldmjrtvxr9c6dyq6", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  164) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Log inリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  151) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Log inリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "sun@fritsch.test", name: "jfdtfndnf2", introduction: "meu1ap7gmcr4lzlkebjh", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  165) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Homeリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  152) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Homeリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "kerry@mosciski-pagac.test", name: "bg8ly549al", introduction: "xu0vua2hm0x4nwou686c", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  166) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Usersリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  153) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Usersリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "marcelino@nitzsche.example", name: "mtse0f9zqw", introduction: "cf4frbi2fwafcrtv1gy8", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  167) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Booksリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  154) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Booksリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "delores@lynch.example", name: "nqj5cog4l7", introduction: "u5o9d1ssp88brmlqxuu0", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  168) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Log outリンクのアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  155) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Log outリンクのアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "michiko.schimmel@paucek-hane.test", name: "isnqhbyjp5", introduction: "q2dsr3hvsi6trce2hyb5", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  169) [STEP3] 仕上げのテスト アイコンのテスト サイドバー ユーザ一覧画面でレンチアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  156) [STEP3] 仕上げのテスト アイコンのテスト サイドバー ユーザ一覧画面でレンチアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "ramona@jenkins-batz.example", name: "rn6s76esci", introduction: "edast76gst7ozum1987t", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  170) [STEP3] 仕上げのテスト アイコンのテスト サイドバー ユーザ詳細画面でレンチアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  157) [STEP3] 仕上げのテスト アイコンのテスト サイドバー ユーザ詳細画面でレンチアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "norman@turcotte.example", name: "h8zoa6ivrm", introduction: "mp6drld0v29wtykb8a2f", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  171) [STEP3] 仕上げのテスト アイコンのテスト サイドバー 投稿一覧画面でレンチアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  158) [STEP3] 仕上げのテスト アイコンのテスト サイドバー 投稿一覧画面でレンチアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "bev@kerluke-cassin.example", name: "ny4zmpfsuy", introduction: "65ks96kti1suku76ixbd", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-  172) [STEP3] 仕上げのテスト アイコンのテスト サイドバー 投稿詳細画面でレンチアイコンが表示される
-       [31mFailure/Error: user.profile_image.attach(io: File.open('spec/images/profile_image.jpeg'), filename: 'profile_image.jpeg', content_type: 'application/xlsx')[0m
+  159) [STEP3] 仕上げのテスト アイコンのテスト サイドバー 投稿詳細画面でレンチアイコンが表示される
+       [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
        [31m[0m
        [31mNoMethodError:[0m
-       [31m  undefined method `profile_image' for #<User id: nil, email: "lelah.greenfelder@aufderhar.example", name: "vmcivdtkmg", introduction: "sou3xmt8j6hk7r8lalb9", created_at: nil, updated_at: nil>[0m
-       [36m# ./spec/factories/users.rb:10:in `block (3 levels) in <main>'[0m
-       [36m# ./spec/system/03_finishing_touches_spec.rb:4:in `block (2 levels) in <main>'[0m
+       [31m  undefined method `title=' for #<Book id: nil, email: "", created_at: nil, updated_at: nil>[0m
+       [36m# ./spec/system/03_finishing_touches_spec.rb:6:in `block (2 levels) in <main>'[0m
 
-Finished in 1.48 seconds (files took 3.28 seconds to load)
-[31m201 examples, 172 failures[0m
+Finished in 8.57 seconds (files took 1.23 seconds to load)
+[31m201 examples, 159 failures[0m
 
 Failed examples:
 
-[31mrspec ./spec/controllers/users_controller_spec.rb:14[0m [36m# UsersController GET #edit ログインユーザーの場合 レスポンスが成功すること[0m
 [31mrspec ./spec/controllers/users_controller_spec.rb:18[0m [36m# UsersController GET #edit ログインユーザーの場合 @userが正しく設定されていること[0m
 [31mrspec ./spec/models/book_spec.rb:11[0m [36m# Bookモデルのテスト バリデーションのテスト titleカラム 空欄でないこと[0m
 [31mrspec ./spec/models/book_spec.rb:18[0m [36m# Bookモデルのテスト バリデーションのテスト bodyカラム 空欄でないこと[0m
@@ -1709,24 +1526,12 @@ Failed examples:
 [31mrspec ./spec/models/book_spec.rb:35[0m [36m# Bookモデルのテスト アソシエーションのテスト Userモデルとの関係 N:1となっている[0m
 [31mrspec ./spec/models/user_spec.rb:11[0m [36m# Userモデルのテスト バリデーションのテスト nameカラム 空欄でないこと[0m
 [31mrspec ./spec/models/user_spec.rb:15[0m [36m# Userモデルのテスト バリデーションのテスト nameカラム 2文字以上であること: 1文字は×[0m
-[31mrspec ./spec/models/user_spec.rb:19[0m [36m# Userモデルのテスト バリデーションのテスト nameカラム 2文字以上であること: 2文字は〇[0m
-[31mrspec ./spec/models/user_spec.rb:23[0m [36m# Userモデルのテスト バリデーションのテスト nameカラム 20文字以下であること: 20文字は〇[0m
 [31mrspec ./spec/models/user_spec.rb:27[0m [36m# Userモデルのテスト バリデーションのテスト nameカラム 20文字以下であること: 21文字は×[0m
 [31mrspec ./spec/models/user_spec.rb:31[0m [36m# Userモデルのテスト バリデーションのテスト nameカラム 一意性があること[0m
-[31mrspec ./spec/models/user_spec.rb:38[0m [36m# Userモデルのテスト バリデーションのテスト introductionカラム 50文字以下であること: 50文字は〇[0m
 [31mrspec ./spec/models/user_spec.rb:42[0m [36m# Userモデルのテスト バリデーションのテスト introductionカラム 50文字以下であること: 51文字は×[0m
 [31mrspec ./spec/models/user_spec.rb:51[0m [36m# Userモデルのテスト アソシエーションのテスト Bookモデルとの関係 1:Nとなっている[0m
 [31mrspec ./spec/system/01_before_login_spec.rb:89[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしていない場合 リンクの内容を確認 Aboutを押すと、アバウト画面に遷移する[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:147[0m [36m# [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 新規登録成功のテスト 正しく新規登録される[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:150[0m [36m# [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 新規登録成功のテスト 新規登録後のリダイレクト先が、新規登録できたユーザの詳細画面になっている[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:192[0m [36m# [STEP1] ユーザログイン前のテスト ユーザログイン ログイン成功のテスト ログイン後のリダイレクト先が、ログインしたユーザの詳細画面になっている[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:221[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:225[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Homeリンクが表示される: 左上から2番目のリンクが「Home」である[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:229[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Usersリンクが表示される: 左上から3番目のリンクが「Users」である[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:233[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Booksリンクが表示される: 左上から4番目のリンクが「Books」である[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:237[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Log outリンクが表示される: 左上から5番目のリンクが「Log out」である[0m
 [31mrspec ./spec/system/01_before_login_spec.rb:258[0m [36m# [STEP1] ユーザログイン前のテスト ユーザログアウトのテスト ログアウト機能のテスト 正しくログアウトできている: ログアウト後のリダイレクト先においてAbout画面へのリンクが存在する[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:261[0m [36m# [STEP1] ユーザログイン前のテスト ユーザログアウトのテスト ログアウト機能のテスト ログアウト後のリダイレクト先が、トップになっている[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:20[0m [36m# [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Homeを押すと、自分のユーザ詳細画面に遷移する[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:26[0m [36m# [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Usersを押すと、ユーザ一覧画面に遷移する[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:32[0m [36m# [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Booksを押すと、投稿一覧画面に遷移する[0m
