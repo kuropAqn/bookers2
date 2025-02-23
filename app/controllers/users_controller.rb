@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(book_params)
-      redirect_to 
     else
       render :users_edit_path
     end
