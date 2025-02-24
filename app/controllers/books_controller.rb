@@ -1,48 +1,63 @@
 class BooksController < ApplicationController
+  before_action :is_matching_login_user, only: [:edit, :update]
+
   def index
-    @book = Book.new
-    @books = Book.all
-  end
+      @book = Book.new
+      @books = Book.all
+      @user = current_user
+  end 
+  
+  def create
+      @book = Book.new(book_params)
+      @book.user_id = current_user.id
+      if @book.save
+        flash[:notice]="You have created book successfully."
+        redirect_to book_path(@book)
+      else
+        @books =Book.all
+        @user = current_user  
+        render :index
+      end   
+  end   
 
   def show
-    @book = Book.new
-    @books = Book.all
-  end
-
-  def create
-    @book = Book.new(book_params)  # book_paramsは許可した属性を取得するためのメソッド
-    if @book.save
-      flash[:notice] = "Book was successfully created."
-      redirect_to book_path(@book.id) # 保存後、追加された本の詳細ページにリダイレクト
-    else
-      @books = Book.all
-      render :new  # 保存に失敗した場合は新規作成ページを再表示
-    end
-  end
+      @book_new = Book.new
+      @book = Book.find(params[:id])
+      @user = @book.user
+  end   
 
   def edit
-    @book = Book.find(params[:id])
-  end
+      @book = Book.find(params[:id])
+  end   
 
   def update
-    @book = Book.find(params[:id])
-    if @book.update(books_params)
-    redirect_to book_path
-    flash[:notice] = "Book was successfully updated."
-    else 
-      render :edit
-    end
-  end
+      @book = Book.find(params[:id])
+      @book.user_id = current_user.id
+      if @book.update(book_params)
+          flash[:notice] = "You have update book successfully."
+          redirect_to book_path(@book.id)
+      else
+          render :edit
+      end  
+  end   
 
   def destroy
-    @book = Book.find(params[:id])
-    @book = Book.destroy
-    flash[:notice] = "Book was successfully destroyed."
-  end
+      book = Book.find(params[:id])
+      book.destroy
+      redirect_to books_path
+  end  
 
   private
+
   def book_params
-    params.require(:book).permit(:title, :body)  # titleとbodyのみを許可
+    params.require(:book).permit(:title, :body)
+  end
+
+  def is_matching_login_user
+      book = Book.find(params[:id])
+      unless book.user.id == current_user.id
+        redirect_to books_path
+      end
   end
 
 end
