@@ -46,13 +46,13 @@ Userモデルのテスト
 [32m      URLが正しい[0m
   ヘッダーのテスト: ログインしていない場合
     表示内容の確認
-[32m      Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である[0m
+[32m      Bookers2リンクが表示される: 左上から1番目のリンクが「Bookers2」である[0m
 [32m      Homeリンクが表示される: 左上から2番目のリンクが「Home」である[0m
 [32m      Aboutリンクが表示される: 左上から3番目のリンクが「About」である[0m
 [32m      Sign upリンクが表示される: 左上から4番目のリンクが「Sign up」である[0m
 [32m      Log inリンクが表示される: 左上から5番目のリンクが「Log in」である[0m
     リンクの内容を確認
-[32m      Bookersを押すと、トップ画面に遷移する[0m
+[32m      Bookers2を押すと、トップ画面に遷移する[0m
 [32m      Homeを押すと、トップ画面に遷移する[0m
 [31m      Aboutを押すと、アバウト画面に遷移する (FAILED - 13)[0m
 [32m      Sign upを押すと、新規登録画面に遷移する[0m
@@ -83,7 +83,7 @@ Userモデルのテスト
 [32m      ログインに失敗し、ログイン画面にリダイレクトされる[0m
   ヘッダーのテスト: ログインしている場合
     ヘッダーの表示を確認
-[32m      Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である[0m
+[32m      Bookers2リンクが表示される: 左上から1番目のリンクが「Bookers2」である[0m
 [32m      Homeリンクが表示される: 左上から2番目のリンクが「Home」である[0m
 [32m      Usersリンクが表示される: 左上から3番目のリンクが「Users」である[0m
 [32m      Booksリンクが表示される: 左上から4番目のリンクが「Books」である[0m
@@ -315,7 +315,7 @@ Failures:
      [31m  [0m[32m+    <header>[0m
      [31m  [0m[32m+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">[0m
      [31m  [0m[32m+     <div class="container">[0m
-     [31m  [0m[32m+       <a class="navbar-brand" href="/"><span>Bookers</span></a>[0m
+     [31m  [0m[32m+       <a class="navbar-brand" href="/"><span>Bookers2</span></a>[0m
      [31m  [0m[32m+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">[0m
      [31m  [0m[32m+        <span class="navbar-toggler-icon"></span>[0m
      [31m  [0m[32m+      </button>[0m
