@@ -65,3 +65,5 @@ gem 'capybara', '>= 2.15'
     gem 'faker'
 
 gem 'rename', group: :development
+
+gem 'rubyzip'

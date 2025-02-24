@@ -10,11 +10,13 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new
+    @book = Book.new(book_params)  # book_paramsは許可した属性を取得するためのメソッド
     if @book.save
       flash[:notice] = "Book was successfully created."
+      redirect_to book_path(@book.id) # 保存後、追加された本の詳細ページにリダイレクト
     else
       @books = Book.all
+      render :new  # 保存に失敗した場合は新規作成ページを再表示
     end
   end
 
@@ -39,8 +41,8 @@ class BooksController < ApplicationController
   end
 
   private
-  def books_params
-    params.require(:books).permit(:title, :body, :image)
+  def book_params
+    params.require(:book).permit(:title, :body)  # titleとbodyのみを許可
   end
 
 end
