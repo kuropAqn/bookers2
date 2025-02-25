@@ -1,37 +1,29 @@
+
 <div class='container px-5 px-sm-0'>
 	<div class='row'>
 	  <div class='col-md-3'>
-	    <h2>User info</h2>
-	    <table class='table'>
-	      <tr>
-	        <%= image_tag 'default-image.jpg' %> <!-- あとで変更 -->
-	      </tr>
-	      <tr>
-	        <th>name</th>
-	        <th><%= @user.name %></th> 
-	      </tr>
-	      <tr>
-	        <th>introduction</th>
-	        <th><% if current_user.introduction.present? %>
-					<%= current_user.introduction %>
-				<% else %>
-					まだ自己紹介文が設定されていません。
-				<% end %></th>  
-	      </tr>
-	    </table>
-	    <div class='row'>
-	      <%= link_to 'Edit', edit_user_path(current_user.id) %>
-	    </div>
-	    <h2 class="mt-3">New book</h2>
-	    <<%= form_with model: @book, url: '/books', method: :post do |f| %>
-        <h4>Title</h4>
-        <%= f.text_field :title %>
+	    <%= render 'users/users', book: @book, user: @user %>
+				
 
-      	<h4>Body</h4>
-        <%= f.text_area :body %>
 
-				<%= f.submit 'Create Book' %>
-
-			<% end %>
-
-      要編集
+	    <div class='col-md-8 offset-md-1'>
+	    <h2>Book detail</h2>
+	    <table class='table table-hover table-inverse'>
+	      <tbody>
+					<tr>
+						<td>
+							<%= image_tag @user.get_profile_image %>
+							<br><%= link_to @user.name, user_path(@user) %></br>
+						</td>
+						<td><%= link_to @book.title, book_path(@book) %></td>
+						<td><%= @book.body %></td>
+							<% if @book.user == current_user %>
+								<td><%= link_to "Edit", edit_book_path(@book), class: "btn btn-success" %></td>
+								<td><%= link_to "Destroy", book_path(@book), method: :delete,class: "btn btn-danger","data-confirm" => "本当に削除しますか？" %></td>
+							<% end %>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
